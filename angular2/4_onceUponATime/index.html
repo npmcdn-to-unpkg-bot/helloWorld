@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>once upon a time</title>
+
+    <!--
+        setting the meta viewport:
+        - - - - - - - - - - - - -
+        "A <meta> viewport element gives the browser instructions on how to control the page's dimensions and scaling.
+        The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
+        The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser."
+        ref: http://www.w3schools.com/css/css_rwd_viewport.asp
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--
+        defining the stylesheet:
+        - - - - - - - - - - - - -
+        Cascading Style Sheets
+        ref: http://www.w3schools.com/html/html_css.asp
+    -->
+    <link rel="stylesheet" href="appInclude/styles.css">
+
+    <!--
+        loading libraries:
+        - - - - - - - - - - - - -
+        main parts, but not all our needed code for running angular 2 is hosted on https://code.angularjs.org/.
+        hence we need some other cdns as well.
+    -->
+
+    <!--
+        "IE requires polyfills to run an application that relies on ES2015 promises and dynamic module loading.
+        Most applications need those capabilities and most applications should run in Internet Explorer."
+        ref: https://angular.io/docs/ts/latest/quickstart.html
+
+        "In web development, a polyfill (or polyfiller) is additional code which provides facilities that are not
+        built into a web browser. It implements technology that a developer expects the browser to provide natively,
+        providing a more uniform API landscape. For example, many features of HTML5 are not supported by versions of
+        Internet Explorer older than version 8 or 9, but can be used by web pages if those pages install a polyfill.
+        Web shims and HTML5 Shivs are related concepts."
+        ref: https://en.wikipedia.org/wiki/Polyfill
+    -->
+
+    <!-- ie required polyfills, in this exact order -->
+    <!-- es6-shim.js @ cdnjs : https://cdnjs.com/libraries/es6-shim -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.0/es6-shim.js"></script>
+    <!-- systemjs @ github : https://github.com/systemjs/systemjs/tree/master/dist -->
+    <script src="appInclude/system-polyfills.src.js"></script>
+    <!-- shims_for_IE.js @ npmcdn.com : https://npmcdn.com -->
+    <script src="//npmcdn.com/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+
+    <!-- angular2 polyfills -->
+    <script src="//code.angularjs.org/2.0.0-beta.12/angular2-polyfills.js"></script>
+
+    <!-- systemjs - to load application and library modules : https://github.com/systemjs/systemjs -->
+    <script src="//code.angularjs.org/tools/system.js"></script>
+
+    <!--
+    Reactive Extensions RxJS library (http://reactivex.io/rxjs/):
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    "RxJS is a library for composing asynchronous and event-based programs by using observable sequences. It provides
+    one core type, the Observable, satellite types (Observer, Schedulers, Subjects) and operators inspired by
+    Array#extras (map, filter, reduce, every, etc) to allow handling asynchronous events as collections.
+    Think of RxJS as lodash for events.
+    ReactiveX combines the Observer pattern with the Iterator pattern and functional programming with collections
+    to fill the need for an ideal way of managing sequences of events."
+    ref: http://reactivex.io/rxjs/manual/overview.html#introduction
+    -->
+    <script src="//code.angularjs.org/2.0.0-beta.12/Rx.js"></script>
+
+    <!-- and (almost) finally, the angular2 lib -->
+    <script src="//code.angularjs.org/2.0.0-beta.12/angular2.dev.js"></script>
+
+    <!-- systemjs config -->
+    <script src="appInclude/system-config.js"></script>
+  </head>
+  <body>
+    <my-app>
+      Loading...
+    </my-app>
+  </body>
+</html>

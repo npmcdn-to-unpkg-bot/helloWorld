@@ -1,0 +1,4 @@
+*.js.map
+/node_modules/.bin
+/node_modules/lite-server
+/node_modules/angular2.full
