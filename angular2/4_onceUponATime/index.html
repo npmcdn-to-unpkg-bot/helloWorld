@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <base href="/">
     <title>once upon a time</title>
 
     <!--
@@ -58,6 +59,7 @@
     <!-- systemjs - to load application and library modules : https://github.com/systemjs/systemjs -->
     <script src="//code.angularjs.org/tools/system.js"></script>
 
+    <!-- don't think this is needed as atom's typescript plugin is being used -->
     <!-- script src="https://npmcdn.com/typescript@1.8.9/lib/typescript.js"></script -->
 
     <!--
@@ -72,6 +74,9 @@
     ref: http://reactivex.io/rxjs/manual/overview.html#introduction
     -->
     <script src="//code.angularjs.org/2.0.0-beta.12/Rx.js"></script>
+
+    <!-- we need a router -->
+    <script src="//code.angularjs.org/2.0.0-beta.12/router.dev.js"></script>
 
     <!-- and (almost) finally, the angular2 lib -->
     <script src="//code.angularjs.org/2.0.0-beta.12/angular2.dev.js"></script>
